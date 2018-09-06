@@ -4,3 +4,120 @@ from flask_login import login_required, current_user
 from ..models import User, Category, Pitches, Comments
 from .forms import UpdateProfile , CommentForm,PitchForm
 from .. import db, photos
+
+
+@main.route('/')
+def index():
+    """View root page function that returns index page and the various news sources"""
+
+    title = 'Pitch'
+
+    return render_template('index.html', title=title)
+
+
+# Route for adding a new pitch
+
+
+@main.route('/category/<int:id>')
+def category(id):
+    '''
+    category route function returns a list of pitches in the category chosen
+    '''
+
+    category = Category.query.get(id)
+
+    if category is None:
+        abort(404)
+
+    pitches = Pitches.get_pitches(id)
+    return render_template('category.html', category=category, pitches=pitches)
+
+
+
+
+@main.route('/category/pitch/new/', methods=['GET', 'POST'])
+def new_pitch():
+    '''
+    Function to check Pitches form
+    '''
+    form = PitchForm()
+       #  category = Category.query.filter_by(id=id).first()
+
+       #  if category is None:
+       #      abort(404)
+       # actual_pitch = db.Column(db.String)
+       #  date_posted = db.Column(db.DateTime, default=datetime.now)
+       #  user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+       #  category_id = db.Column(db.Integer, db.ForeignKey("category.id"))
+       #  comment = db.relationship("Comments", backref="pitches", lazy="dynamic")
+
+    if form.validate_on_submit():
+        actual_pitch = form.pitch.data
+        new_pitch = Pitches(actual_pitch=actual_pitch,
+                            user_id=current_user.id,comment=comment)
+        new_pitch.save_pitch()
+        return redirect(url_for('main.new_pitch'))
+    pitches = Pitches.query.all()
+
+    return render_template('new_pitch.html', pitch_form=form, category=category, pitches = pitches)
+
+# Routes for displaying the different pitches
+
+@main.route('/pitch/<pitch_id>', methods=['GET', 'POST'])
+@login_required
+def single_pitch(id):
+    '''
+    Function the returns a single pitch for comment to be added
+    '''
+
+    pitches = Pitches.query.get(id)
+
+    if pitches is None:
+        abort(404)
+
+    comment = Comments.get_comments(id)
+    return render_template('pitch.html', pitches=pitches, comment=comment)
+
+
+# Routes for user authentication
+@main.route('/user/<uname>')
+@login_required
+def profile(uname):
+    user = User.query.filter_by(username=uname).first()
+
+    if user is None:
+        abort(404)
+
+    return render_template("profile/profile.html", user=user)
+
+
+@main.route('/user/<uname>/update', methods=['GET', 'POST'])
+@login_required
+def update_profile(uname):
+    user = User.query.filter_by(username=uname).first()
+    if user is None:
+        abort(404)
+
+    form = UpdateProfile()
+
+    if form.validate_on_submit():
+        user.bio = form.bio.data
+
+        db.session.add(user)
+        db.session.commit()
+
+        return redirect(url_for('.profile', uname=user.username))
+
+    return render_template('profile/update.html', form=form)
+
+
+@main.route('/user/<uname>/update/pic', methods=['POST'])
+@login_required
+def update_pic(uname):
+    user = User.query.filter_by(username=uname).first()
+    if 'photo' in request.files:
+        filename = photos.save(request.files['photo'])
+        path = 'photos/{}'.format(filename)
+        user.profile_pic_path = path
+        db.session.commit()
+    return redirect(url_for('main.profile', uname=uname))
