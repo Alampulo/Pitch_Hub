@@ -11,7 +11,7 @@ def index():
     """View root page function that returns index page and the various news sources"""
 
     title = 'Pitch'
-
+    
     return render_template('index.html', title=title)
 
 
