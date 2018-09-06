@@ -1,6 +1,9 @@
 # Pitch_Hub
 
 A flask application that allows users submit their one minute pitches and other users will vote on them and leave comments to give their feedback on them.
+## Author
+
+* Bryan Juma
 ## Description
 
 This application enables a user :
@@ -24,7 +27,7 @@ This application enables a user :
 
 	$ python3.6
 
-	Python 3.6.0 (default, Nov 17 2016, 17:05:23)
+	Python 3.6.5 (default, Sep 9 2018, 17:05:23)
 	[GCC 5.4.0 20160609] on linux
 	Type "help", "copyright", "credits" or "license" for more information.
 	>>>
@@ -50,7 +53,10 @@ This application enables a user :
 
 ## Technology Used
 
-* Python3.6
+* Python3.6/flask
+* bootstrap
+* html/css
+* postgresql
 
 ## Known Bugs
 
@@ -58,11 +64,9 @@ This application enables a user :
 
 ## Versioning
 
-* 8/05/2018
+* 5/9/2018
 
-## Author
 
-* Bryan Juma
 
 ## Licence
 

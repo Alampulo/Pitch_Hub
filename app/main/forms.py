@@ -20,7 +20,7 @@ class CommentForm(FlaskForm):
     comment_id = TextAreaField('WRITE COMMENT')
     submit = SubmitField('SUBMIT')
 
-class PitchForm(FlaskForm): #create a class that inherits from FlaskForm class
+class PitchForm(FlaskForm): # creates a class that inherits from FlaskForm class
     name = StringField('Authors Name', validators = [Required()])
     categoy = TextAreaField('Pitch', validators=[Required()])
     pitch = TextAreaField('Pitch', validators=[Required()])
