@@ -5,7 +5,6 @@ from ..models import User, Category, Pitches, Comments
 from .forms import UpdateProfile , CommentForm,PitchForm
 from .. import db, photos
 
-
 @main.route('/')
 def index():
     """View root page function that returns index page and the various news sources"""
@@ -14,10 +13,7 @@ def index():
 
     return render_template('index.html', title=title)
 
-
 #  adding a new pitch Route
-
-
 @main.route('/category/<int:id>')
 def category(id):
     '''
@@ -32,9 +28,6 @@ def category(id):
     pitches = Pitches.get_pitches(id)
     return render_template('category.html', category=category, pitches=pitches)
 
-
-
-
 @main.route('/category/pitch/new/', methods=['GET', 'POST'])
 def new_pitch():
     '''
@@ -42,7 +35,6 @@ def new_pitch():
     '''
     form = PitchForm()
        #  category = Category.query.filter_by(id=id).first()
-
        #  if category is None:
        #      abort(404)
        # actual_pitch = db.Column(db.String)
@@ -123,7 +115,6 @@ def update_pic(uname):
     return redirect(url_for('main.profile', uname=uname))
 
 # Route to add commments.
-
 
 @main.route('/pitch/new/<comment_id>', methods=['GET', 'POST'])
 @login_required

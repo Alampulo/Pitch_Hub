@@ -4,7 +4,7 @@ from sqlalchemy import engine_from_config, pool
 from logging.config import fileConfig
 import logging
 
-# the Alembic Configuration object, it provides
+# the Alembic Configuration object, ----it provides
 # access to the values within the .ini file in use.
 config = context.config
 

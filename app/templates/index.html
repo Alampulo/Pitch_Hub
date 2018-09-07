@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Galada|Satisfy" rel="stylesheet">
 <script src="//css/animate.css"></script>
-<!------ Include the above in your HEAD tag ---------->
+
 
 <section id="team" class="pb-5" style="margin-top: 5%;">
     <div class="container">
@@ -26,13 +26,13 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZlDjAyU5DvH_zX-8KUJmtkUTaLpVYG4xXwLn80nUbJDPEfhAxCQ" alt="card image"></p>
+                                    <p><img class=" img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvBY1OkOvpJ4ZguE3xC9TBDk3Ary5sTyEFLZwW9_okOnWBCkpANw" alt="card image"></p>
                                     <h5 class="card-title" style="font-family: 'Galada', cursive; font-size: 3em;">Positive</h5>
                                     <p class="card-text"> Once you replace negative thoughts with positive ones, you'll start having positive results.</p>
                                     <a href="  {{url_for('main.new_pitch')}}" class="btn btn-primary btn-sm">More<i class="fa fa-plus"></i></a>
                                     {% if current_user.is_authenticated%}
 					                <a id="start" class="btn btn-danger animated infinite flash" href="{{url_for('main.new_pitch')}}">View Pitches</a>
-					                
+
 					                {% endif %}
                                 </div>
                             </div>
@@ -40,6 +40,7 @@
                         <div class="backside">
                             <div class="card">
                                 <div class="card-body text-center mt-4">
+                                  <p><img class=" img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRQfB-xpeW_1fZlMCtKBalfizfDRoC7w11dBWxNla4wDj8vX6H" alt="card image"></p>
                                     <h5 class="card-title" style=" font-size: 2em; text-underline-position: bold;">pitchit</h5>
                                     <p class="card-text">Stop being afraid of what could go wrong but be afraid of what could go right.</p>
                                 </div>
@@ -48,15 +49,14 @@
                     </div>
                 </div>
             </div>
-            <!-- ./Team member -->
-            <!-- Team member -->
+                    <!-- Team member -->
             <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                     <div class="mainflip">
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="https://thumbs.dreamstime.com/b/hand-writing-text-caption-inspiration-showing-elevation-pitch-business-concept-talking-communication-written-sticky-note-110996729.jpg" alt="card image"></p>
+                                    <p><img class=" img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs8BnKZ33ZK6Nwopmj0W3K5OzqMRK7o_yiMiwh9KrDvSBl_L4EXQ" alt="card image"></p>
                                     <h5 class="card-title"  style="font-family: 'Galada', cursive; font-size: 3em;">Inspiration</h5>
                                     <p class="card-text">An inspiration is when you feel a deep rooted passion and motivate to do something.</p>
                                     <a href=" {{url_for('main.new_pitch')}}" class="btn btn-primary btn-sm">More<i class="fa fa-plus"></i></a>
@@ -71,16 +71,15 @@
                                 <div class="card-body text-center mt-4">
                                     <h5 class="card-title" style=" font-size: 2em; text-underline-position: bold;">Pitchit</h5>
                                     <p class="card-text">Integrity is choosing your thoughts and actions based on values rather than personal gain.</p>
-                                   
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ./Team member -->
-            <!-- Team member -->
-            <div class="col-xs-12 col-sm-6 col-md-4">
+                      <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                     <div class="mainflip">
                         <div class="frontside">
@@ -92,7 +91,7 @@
                                     <a href="{{url_for('main.new_pitch')}}" class="btn btn-primary btn-sm">More<i class="fa fa-plus"></i></a>
 					                {% if current_user.is_authenticated%}
 					                <a id="start" class="btn btn-danger animated infinite flash" href="{{url_for('main.new_pitch')}}">View Pitches</a>
-					                
+
 					                {% endif %}
                                 </div>
                             </div>
@@ -102,7 +101,7 @@
                                 <div class="card-body text-center mt-4">
                                     <h5 class="card-title" style=" font-size: 2em; text-underline-position: bold;">Pitchit</h5>
                                     <p class="card-text">This a family where we laughs and learns, prays and protect, apologise and appreciate, dreams and discovers, fights and forgives, teases and trusts, gives and grows. believes and belongs, laove and last forever.</p>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -111,19 +110,19 @@
             </div>
             <!-- ./Team member -->
             <!-- Team member -->
-            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                     <div class="mainflip">
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTCqLHr8K-ZYTYML0vSblxHi-mDzGhrb9nuqvRL_vcWrn7jf9W" alt="card image"></p>
+                                    <p><img class=" img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTVZ-7DGJAIpDrL7g32wM6ugq3is8Pu7rUVYQds8hvDtOAUnKG" alt="card image"></p>
                                     <h5 class="card-title"  style="font-family: 'Galada', cursive; font-size: 3em;">Nature</h5>
                                     <p class="card-text">This is  is a multi platform brand that brings nature lovers closer to the beauty and wonder of nature and inspires them to protect and care for our natural world</p>
                                     <a href="{{url_for('main.new_pitch')}}" class="btn btn-primary btn-sm">More<i class="fa fa-plus"></i></a>
                                     {% if current_user.is_authenticated%}
 					                <a id="start" class="btn btn-danger animated infinite flash" href="{{url_for('main.new_pitch')}}">View Pitches</a>
-					                
+
 					                {% endif %}
 					                                </div>
                             </div>
@@ -133,7 +132,7 @@
                                 <div class="card-body text-center mt-4">
                                     <h5 class="card-title"  style=" font-size: 2em; text-underline-position: bold;">Pitchit</h5>
                                     <p class="card-text">You can't come the storm so stop trying..... what can do is calm yourself.the storm will pass.</p>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -142,7 +141,7 @@
             </div>
             <!-- ./Team member -->
             <!-- Team member -->
-            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                     <div class="mainflip">
                         <div class="frontside">
@@ -168,7 +167,7 @@
             </div>
             <!-- ./Team member -->
             <!-- Team member -->
-            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                     <div class="mainflip">
                         <div class="frontside">
@@ -180,7 +179,7 @@
                                     <a href="{{url_for('main.new_pitch')}}" class="btn btn-primary btn-sm">More<i class="fa fa-plus"></i></a>
                                     {% if current_user.is_authenticated%}
 					                <a id="start" class="btn btn-danger animated infinite flash" href="{{url_for('main.new_pitch')}}">View Pitches</a>
-					               
+
 					                {% endif %}
                                 </div>
                             </div>
@@ -190,7 +189,7 @@
                                 <div class="card-body text-center mt-4">
                                     <h5 class="card-title" style=" font-size: 2em; text-underline-position: bold;">Pitchit</h5>
                                     <p class="card-text">Best friends: you fight,i fight,you cry, i cry you jump off a bridge, l'll get a boat and save your retarded butt.</p>
-                                    
+
                                 </div>
                             </div>
                         </div>
