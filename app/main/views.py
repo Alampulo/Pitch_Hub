@@ -11,11 +11,11 @@ def index():
     """View root page function that returns index page and the various news sources"""
 
     title = 'Pitch'
-    
+
     return render_template('index.html', title=title)
 
 
-# Route for adding a new pitch
+#  adding a new pitch Route
 
 
 @main.route('/category/<int:id>')
