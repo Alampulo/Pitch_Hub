@@ -20,9 +20,10 @@ class User(UserMixin,db.Model):
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
     pass_secure = db.Column(db.String(255))
+
     pitches = db.relationship("Pitches", backref="user", lazy="dynamic")
     comment = db.relationship("Comments", backref="user", lazy="dynamic")
-    
+
     def __repr__(self):
        return 'User {}'.format(self.username)
 
@@ -48,7 +49,7 @@ class User(UserMixin,db.Model):
 
 
 
-    
+
 class Category(db.Model):
     __tablename__ = 'category'
 
@@ -113,10 +114,3 @@ class Comments(db.Model):
 
 if __name__ == '__main__':
     manager.run()
-
-
-
-
-
-
-
