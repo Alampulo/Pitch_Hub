@@ -70,18 +70,12 @@ This application enables a user :
 ### Pitch Pool specifications
 | Behavior        | Input           | Outcome  |
 | ------------- |:-------------:| -----:|
-| Register to be a user | Your email : jon@doe.com <br> Username : jon101 <br> Password : doe1 | New user is registered |
-| Log in | Your email : jumabryan10@gmail.com <br> Password : @askoe97 | Logged in |
+| Register to be a user | Your email : jumabryan@gmail.com.com <br> Username : jon101 <br> Password :@askoe97 | New user is registered |
+| Log in | Your email : jumabryan10@gmail.com <br> Password : @askoe97 | Logged in 
 | Display pitch categories | Categories display on navbar | List of various pitch categories |
 | See pitches from selected category | **Click** a category | Directed to a page with a list of pitches from the selected category |
 | Create a pitch | **Click Add a pitch** | An authenticated user is directed to a page with a form where the user can create and submit a pitch |
 | Comment on a pitch | **Click Comment** | An authenticated user is directed to a page with a form where the user can create and submit a comment on a pitch. |
-
-
-
-## Licence
-
-* MIT
 
 ## Support and contact details
 
@@ -90,3 +84,30 @@ This application enables a user :
 * No. 0701323172
 
 * email: bryanjuma10@gmail.com
+
+
+
+## Licence
+
+MIT License
+
+Copyright (c) 2018 Bryan Juma
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
